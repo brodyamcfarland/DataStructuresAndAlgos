@@ -26,4 +26,4 @@ const fibonacciRecursive = (n) => {
     return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 }; // O(2^n) Exponential - Horribble Complexity
 
-console.log(fibonacciRecursive(10)); // If we
+console.log(fibonacciRecursive(10)); // If we input 50, it will take forever due to an exponential amount of function calls
