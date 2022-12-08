@@ -1,3 +1,33 @@
+const selectionSort2 = (arr) => {
+    // Loop through the array
+    for (let i = 0; i < arr.length; i++) {
+        // Set the minimum value to the current position
+        let min = i;
+
+        // Loop through the array again, starting from the next position
+        for (let j = i + 1; j < arr.length; j++) {
+            // If the current element is less than the minimum value, update the minimum value
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+
+        // If the minimum value is not at the current position, swap it with the current position
+        if (i !== min) {
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+
+    // Return the sorted array
+    return arr;
+};
+
+// Example: sort the array [9, 3, 1, 4, 6] in ascending order
+console.log(selectionSort([9, 3, 1, 4, 6])); // [1, 3, 4, 6, 9]
+
+//----------------------------------------------//
 const numbers = [99, 44, 6, 2, 1, 5, 10];
 
 const selectionSort = (array) => {
