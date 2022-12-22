@@ -12,6 +12,7 @@ const mergeSort = (arr) => {
 };
 
 const merge = (left, right) => {
+    //keeps track of the new sorted list
     const result = [];
     let leftIndex = 0;
     let rightIndex = 0;
